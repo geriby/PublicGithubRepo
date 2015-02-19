@@ -28,7 +28,7 @@ public class Cell extends com.mygdx.game.units.Character {
 
     public Cell(){
         rn = new Random();
-        img = new Texture("goku_enemy_walk.png");
+        img = new Texture("images/cell/goku_enemy_walk.png");
         int index =0;
         frames = new TextureRegion[14];
         TextureRegion[][] tmp = TextureRegion.split(img,img.getWidth()/7 , img.getHeight()/2);

@@ -20,8 +20,8 @@ import com.mygdx.game.controllers.GameStateManager;
 import com.mygdx.game.units.heros.Goku;
 
 public class DragonBall extends ApplicationAdapter {
-	SpriteBatch batch;
-	Texture img;
+	private SpriteBatch batch;
+	private Texture img;
 	public static OrthographicCamera cam;
     private GameStateManager gsm;
     public static int WIDTH;
@@ -41,17 +41,16 @@ public class DragonBall extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-        img = new Texture("jungle.jpg");
+        img = new Texture("images/maps/jungle.jpg");
         WIDTH = Gdx.graphics.getWidth();
         HEIGHT = Gdx.graphics.getHeight();
         cam = new OrthographicCamera(WIDTH, HEIGHT);
-        image = new Image(new Texture(Gdx.files.internal("Game-Over.png")));
-        fightButtonNorm = new TextureRegion(new Texture("button_norm.png"));
-        fightButtonPress = new TextureRegion(new Texture("button_pressed.png"));
+        image = new Image(new Texture(Gdx.files.internal("images/levelcontroll/Game-Over.png")));
+        fightButtonNorm = new TextureRegion(new Texture("images/fightButton/button_norm.png"));
+        fightButtonPress = new TextureRegion(new Texture("images/fightButton/button_pressed.png"));
         cam.translate(WIDTH/2,HEIGHT/2);
         setJoistick();
         setFightButton();
-//        stage.addActor(fightButton);
 	    gsm = new GameStateManager();
     }
 
@@ -80,8 +79,8 @@ public class DragonBall extends ApplicationAdapter {
 
     private void setJoistick() {
         touchpadSkin = new Skin();
-        touchpadSkin.add("touchBackground", new Texture("data/touchBackground.png"));
-        touchpadSkin.add("touchKnob", new Texture("data/touchKnob.png"));
+        touchpadSkin.add("touchBackground", new Texture("images/data/touchBackground.png"));
+        touchpadSkin.add("touchKnob", new Texture("images/data/touchKnob.png"));
         touchpadStyle = new Touchpad.TouchpadStyle();
         touchBackground = touchpadSkin.getDrawable("touchBackground");
         touchKnob = touchpadSkin.getDrawable("touchKnob");

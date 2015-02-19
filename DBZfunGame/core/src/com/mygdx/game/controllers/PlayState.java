@@ -34,10 +34,10 @@ public class PlayState extends GameState {
     }
 
     public  void  update(Touchpad touchpad, Boolean kamehama){
-//        if (Calendar.getInstance().getTimeInMillis() - botCreated > 10000){
-//            botCreated = Calendar.getInstance().getTimeInMillis();
-//            enemies.add(new Cell());
-//        }
+        if (Calendar.getInstance().getTimeInMillis() - botCreated > 10000){
+            botCreated = Calendar.getInstance().getTimeInMillis();
+            enemies.add(new Cell());
+        }
         goku.update(enemies, touchpad, kamehama);
         if(enemies.size() > 0) {
             for (Cell cell : enemies) {

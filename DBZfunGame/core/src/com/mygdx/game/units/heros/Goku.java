@@ -132,21 +132,19 @@ public class Goku extends com.mygdx.game.units.Character {
     private void initObjects(){
         energyBall = new EnergyBall();
         stage = new Stage();
-        Image image = new Image(new Texture(Gdx.files.internal("goku_face.png")));
+        Image image = new Image(new Texture(Gdx.files.internal("images/goku/goku_face.png")));
         image.setPosition(50,Gdx.graphics.getHeight() - Gdx.graphics.getHeight()/4);
         image.setSize(Gdx.graphics.getHeight()/5,Gdx.graphics.getHeight()/5);
         stage.addActor(image);
         sr  = new ShapeRenderer();
-        animation = new Animation(1.6f, getFrames(28,7,4,"goku_walk.png"));
-        kameAnimation = new Animation(3f, getFrames(9,9,1,"Kamehama.png"));
-
-
+        animation = new Animation(1.6f, getFrames(28,7,4,"images/goku/goku_walk.png"));
+        kameAnimation = new Animation(3f, getFrames(9,9,1,"images/goku/Kamehama.png"));
     }
 
     private void initSound(){
-        Sound wavImReady = Gdx.audio.newSound(Gdx.files.internal("im_ready.wav"));
-        wavTakeThat = Gdx.audio.newSound(Gdx.files.internal("take_that.wav"));
-        mp3Kamehame = Gdx.audio.newMusic(Gdx.files.internal("kamehameha.wav"));
+        Sound wavImReady = Gdx.audio.newSound(Gdx.files.internal("sounds/goku/im_ready.wav"));
+        wavTakeThat = Gdx.audio.newSound(Gdx.files.internal("sounds/goku/take_that.wav"));
+        mp3Kamehame = Gdx.audio.newMusic(Gdx.files.internal("sounds/goku/kamehameha.wav"));
         wavImReady.play();
     }
 

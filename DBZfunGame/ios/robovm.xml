@@ -14,7 +14,7 @@
       <skipPngCrush>true</skipPngCrush>
     </resource>
     <resource>
-      <directory>data</directory>
+      <directory>images.data</directory>
     </resource>
   </resources>
   <forceLinkClasses>

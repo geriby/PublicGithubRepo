@@ -15,7 +15,7 @@ public class EnergyBall extends com.mygdx.game.units.Character {
     private Boolean stop = true;
 
     public EnergyBall(){
-        img = new Texture("ball.png");
+        img = new Texture("images/goku/ball.png");
         this.x = -1000;
         this.y = Gdx.graphics.getHeight()/7;
     }
