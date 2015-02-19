@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package com.mygdx.game.units.heros;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
@@ -11,6 +11,8 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Touchpad;
+import com.mygdx.game.*;
+import com.mygdx.game.units.enemies.Cell;
 
 import java.util.Iterator;
 import java.util.List;
@@ -21,11 +23,10 @@ import java.util.Random;
  */
 
 
-public class Goku extends Character {
+public class Goku extends com.mygdx.game.units.Character {
     private Animation animation, kameAnimation;
     private EnergyBall energyBall;
     private int index = 0;
-//    private Texture img;
     private TextureRegion currentFrame;
     private Boolean targetFromRight = true;
     private Sound wavTakeThat;
@@ -136,7 +137,6 @@ public class Goku extends Character {
         image.setSize(Gdx.graphics.getHeight()/5,Gdx.graphics.getHeight()/5);
         stage.addActor(image);
         sr  = new ShapeRenderer();
-//        img = new Texture("goku_walk.png");
         animation = new Animation(1.6f, getFrames(28,7,4,"goku_walk.png"));
         kameAnimation = new Animation(3f, getFrames(9,9,1,"Kamehama.png"));
 
@@ -172,7 +172,6 @@ public class Goku extends Character {
                 mp3Kamehame.play();
                 if(index > 9) index=0;
             }
-
             currentFrame = kameAnimation.getKeyFrame(++index);
             return true;
         }

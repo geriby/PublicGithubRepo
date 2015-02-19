@@ -10,15 +10,14 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.actions.AddListenerAction;
-import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Touchpad;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
-import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.mygdx.game.controllers.GameStateManager;
+import com.mygdx.game.units.heros.Goku;
 
 public class DragonBall extends ApplicationAdapter {
 	SpriteBatch batch;
@@ -53,7 +52,6 @@ public class DragonBall extends ApplicationAdapter {
         setJoistick();
         setFightButton();
 //        stage.addActor(fightButton);
-        Gdx.input.setInputProcessor(new GameInputProcessor());
 	    gsm = new GameStateManager();
     }
 
@@ -62,10 +60,9 @@ public class DragonBall extends ApplicationAdapter {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
-        batch.draw(img, 0, 0, 2 * WIDTH, (int)(HEIGHT + 0.2*HEIGHT) );
+        batch.draw(img, 0, 0, 2 * WIDTH, (int) (HEIGHT + 0.2 * HEIGHT));
         batch.end();
         Gdx.input.setInputProcessor(stage);
-        GameKeys.update();
         gsm.update(touchpad, kamehama);
         gsm.draw(touchpad);
         stage.draw();

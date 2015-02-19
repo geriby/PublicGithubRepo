@@ -1,8 +1,10 @@
-package com.mygdx.game;
+package com.mygdx.game.controllers;
 
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Touchpad;
+import com.mygdx.game.units.enemies.Cell;
+import com.mygdx.game.units.heros.Goku;
 
 import java.util.Calendar;
 import java.util.LinkedList;
@@ -12,7 +14,7 @@ import java.util.List;
  * Created by Ostap on 13.10.2014.
  */
 
-public class PlayState extends GameState{
+public class PlayState extends GameState {
     private SpriteBatch batch;
     private Long botCreated;
     private Goku goku;

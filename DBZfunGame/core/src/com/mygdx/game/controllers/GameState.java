@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package com.mygdx.game.controllers;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Touchpad;
 
@@ -15,7 +15,6 @@ public abstract class GameState {
     public abstract  void init();
     public abstract  void  update(Touchpad touchpad, Boolean kamehama);
     public abstract void draw(Touchpad touchpad);
-//    public abstract void handleInput();
     public abstract void dispose();
 
 

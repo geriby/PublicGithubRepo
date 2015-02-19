@@ -1,12 +1,13 @@
-package com.mygdx.game;
+package com.mygdx.game.units.heros;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
 /**
  * Created by Ostap on 29.10.2014.
  */
-public class EnergyBall extends Character{
+public class EnergyBall extends com.mygdx.game.units.Character {
 
     private final int speed = 2;
     private Texture img;

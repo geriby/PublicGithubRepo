@@ -1,10 +1,12 @@
-package com.mygdx.game;
+package com.mygdx.game.units.enemies;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.mygdx.game.*;
+import com.mygdx.game.units.heros.EnergyBall;
 
 import java.util.List;
 import java.util.Random;
@@ -12,7 +14,7 @@ import java.util.Random;
 /**
  * Created by Ostap on 28.10.2014.
  */
-public class Cell extends Character{
+public class Cell extends com.mygdx.game.units.Character {
 
     private final float speed = 0.5f;
     private List<Texture> cellImages;

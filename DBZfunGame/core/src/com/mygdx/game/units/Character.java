@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package com.mygdx.game.units;
 
 /**
  * Created by Ostap on 15.10.2014.
